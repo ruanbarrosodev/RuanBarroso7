@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Android - Ruan Barroso</title>
+</head>
+<body>
+    
+    <nav class="nav">
+        <ul class="lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="androidprojects.html">Android Dev</a></li>
+            <li><a href="analyticsprojects.html">Análise Dados</a></li>
+            <li><a href="gameprojects.html">Game Dev</a></li>
+            <li><a href="#">Web Dev</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+            <div class="containerHeader">
+               <!--  <img src="assets/profilepic.jpg" alt="profilePic">
+                <h1>Fui programar um portfólio novo, e acabei criando a perfeição.</h1>
+                <p>Barroso, Ruan - 2023</p> -->
+            </div>  
+    </header>
+    <div class="mobile">
+        <div class="position">
+            <img src="../assets/icons/menu.svg" alt="menu" id="button_mobile"> 
+           <!--  <div class="mobileButton" id="button_mobile">
+            </div> -->
+        </div>
+    </div>
+<main id="inicio">
+    <h1>Projetos</h1>
+    <div class="projectsOld">
+        <h2>Um pouco de tudo web aqui</h2>
+        <p>Eu realmente gostava de brincar com programação web, então eu fazia layouts de sites, brincavas com as propriedades de css para ver o que podia fazer, e fazia desafios javascript a mim mesmo, como fazer um jogo da memória, entre outras coisas, então antes de mostrar os CRUD que fiz, decidi colocar todas as coisas que eu fazia quando não tinha nada pra fazer. A maioria dos desafios Javascript eu fiz mexendo com DOM e então eu criava o elemento por Javascript e os Layouts eu fazia a versão responsiva mobile também, e sempre deixava todo o CSS organizado, logo clicar em qualquer um mostra que eu treinava todas as áreas ao mesmo tempo.</p>
+        <div class="containerOldProjects">
+            <ul>
+                <h4>Layouts</h4>
+                <a href="../projects/layouts/Canseidoblocodenotas/index.html"><li>Um blog de textos</li><img src="../assets/images/projectsImages/canseido.png" alt="imgpro"></a>
+                <a href="../projects/layouts/EBM/index.html"><li>Um site pra compartilhar e baixar livros</li><img src="../assets/images/projectsImages/ebm.png" alt="imgpro"></a>
+                <a href="../projects/layouts/SannyWeb/index.html"><li>Startup de criação de websites</li><img src="../assets/images/projectsImages/sannyweb.png" alt="imgpro"></a>
+                <a href="../projects/layouts/L.A Viegas/index.html"><li>Startup de vendas de produtos</li><img src="../assets/images/projectsImages/lsviegas.png" alt="imgpro"></a>
+            </ul>
+            <ul>
+                <h4>Javascript</h4>
+                <a href="../projects/javascript/calculatorOne_Black.htm"><li>Calculadora</li><img src="../assets/images/projectsImages/calculator.png" alt="imgpro"></a>
+                <a href="../projects/javascript/calendarOne.html"><li>Calendario com pesquisa de ano</li><img src="../assets/images/projectsImages/calendar.png" alt="imgpro"></a>
+                <a href="../projects/javascript/forcaOne.html"><li>Jogo da forca</li><img src="../assets/images/projectsImages/forca.png" alt="imgpro"></a>
+                <a href="../projects/javascript/jogoDaVelhaOne.html"><li>Jogo da velha</li><img src="../assets/images/projectsImages/velhagame.png" alt="imgpro"></a>
+                <a href="../projects/javascript/memoryGameOne.html"><li>Jogo da memória</li><img src="../assets/images/projectsImages/memorygame.png" alt="imgpro"></a>
+            </ul>
+            <ul>
+                <h4>CSS</h4>
+                <a href="../projects/css/ball-fallingdown-waiting.html"><li>Loader - uma bola caindo</li><img src="../assets/images/projectsImages/falling.png" alt="imgpro"></a>
+                <a href="../projects/css/effectsoundbox.html"><li>Loader - efeito caixa de som</li><img src="../assets/images/projectsImages/soundbox.png" alt="imgpro"></a>
+                <a href="../projects/css/uber-loader.html"><li>Loader - efeito girando e voltando</li><img src="../assets/images/projectsImages/infinite.png" alt="imgpro"></a>
+                <a href="../projects/css/folha konoha.html"><li>Folha feito em CSS</li><img src="../assets/images/projectsImages/leaf.png" alt="imgpro"></a>
+                <a href="../projects/css/eyes.html"><li>Olhos feitos em CSS</li><img src="../assets/images/projectsImages/eyes.png" alt="imgpro"></a>
+
+            </ul>
+           
+        </div>
+    </div>
+    <div class="projects">
+        <section class="project">
+            <h2>Ebook Manager</h2>
+            <p>Os projetos acima são apenas arquivos estáticos, pude inseri-los aqui, quando se trata de projetos com banco de dados, não posso coloca-los aqui e por isso a partir daqui só imagens. Este primeiro é de longe o maior projeto que fiz, é um site de compartilhamento de livros ebook, onde o usuário entra com seu login, salva os seus livros, e pode baixar os livros de outras pessoas que o colocaram publico. Tem tela administrativa, onde eu como administrador do site, posso cadastrar um novo gênero, categoria, cadastrar novos livros, e aceitar comentários. O site tem busca de livros, tem livro destaque, livro mais lidos, comentários do livro, ele é completo. Vale ressalvar que eu não escrevi uma linha de front-end nesse projeto(fora a sessão administrativa que foi inteira feita por mim), o website em si eu fiz apenas a parte back-end, era um projeto final de curso e tarefas foram divididas. A primeira versão dele foi escrita em PHP, mas quando passei a estudar NodeJS eu fiz a atualização dele pra server side rendering com NodeJS. </p>
+            <div class="containerProject">
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (1).png"><img src="../assets/images/projectsImages/ebm (1).png" alt="improject"></a>
+                    <p>Com um um livro de destaque que se atualiza a cada 3 dias, uma tela de login, últimos livros adicionados e mais lidos, esse é a página inicial. Todos os gêneros, categorias são cadastrados no banco de dados podendo ter fácil adição de novos.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (2).png"><img src="../assets/images/projectsImages/ebm (2).png" alt="improject"></a>
+                    <p>Este é a tela de busca de livros, onde trás os livros. Eu fiz uma query onde me traria resultado com o nome do autor, e do livro. Também coloquei filtros de data de lançamento e e ordem alfabética.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (3).png"><img src="../assets/images/projectsImages/ebm (3).png" alt="improject"></a> 
+                    <p>A página do livro, que era responsável por mostrar comentários dos livros, e a opção de download. Com todas as informações do livro, salvas e resgatadas do banco de dados.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (4).png"><img src="../assets/images/projectsImages/ebm (4).png" alt="improject"></a>
+                    <p>Esta era a tela de Driver do usuário, onde ele salvava seus ebooks pessoais, podendo alternar entre privado e publico. Caso publico poderia ser baixado por outras pessoas.</p>
+                </div>
+            </div>
+        </section>
+        <section class="project">
+            <h2>Contatos</h2>
+            <p>Este na verdade foi meu primeiro projeto sem seguir nenhum curso em NodeJS, também usando SSR, é um CRUD que eu fiz mais pra fixar o conhecimento. Também quis seguir a documentação da MongoDB pra aprender sobre os banco de dados não relacionais. Também optei por tudo ser carregado em apenas uma tela. </p>
+            <div class="containerProject">
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/contacts (1).png"><img src="../assets/images/projectsImages/contacts (1).png" alt="improject"></a>
+                    <p>Aqui eu fiz uma tela de login e cadastramento, usei crypto pra criptografar a senha e usei de recursos JS DOm pra transladar entre login e cadastro.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/contacts (2).png"><img src="../assets/images/projectsImages/contacts (2).png" alt="improject"></a>
+                    <p>Aqui é a listagem de contatos salvos, com a opção de deletar e ver mais(onde possivelmente poderá ser editado). Como é a listagem, eu também fiz questão de fazer sempre que o usuário digitar alguma letra na barra de pesquisa já troca para essa tela de listagem. </p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/contacts (3).png"><img src="../assets/images/projectsImages/contacts (3).png" alt="improject"></a> 
+                    <p>Nesta terceira tela, eu criei o cadastramento de contatos, uma pequena verificação para todas informações obrigatórias, e opção para mais de uma rede social e número de contato.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/contacts (4).png"><img src="../assets/images/projectsImages/contacts (4).png" alt="improject"></a>
+                    <p>Na tela de ver mais, onde eu posso editar as informações daquele contato específico e salva-la no banco de dados.</p>
+                </div>
+            </div>
+        </section>
+        <section class="project">
+            <h2>Contatos(Com React)</h2>
+            <p>Logo após me sentir bem com NodeJS, abri a documentação do React e comecei a estudar os principios, aprendi as boas práticas, tudo são componentes, o principal sobre Hooks, conceito de imutabilidade, e como fazer a requisição a API com Cors. Ainda dei uma pincelada em styled-components para css, foi ótimo minha interação com React TS. Me dei desafios, e seguindo somente a documentação tive de resolve-los.</p>
+            <div class="containerProject">
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/reacttsnode (1).png"><img src="../assets/images/projectsImages/reacttsnode (1).png" alt="improject"></a>
+                    <p>Todo o front feito por react, eu me preocupei sempre em seguir as boas práticas, e também novos desafios pra mim, coisas que eu imaginaria ser mais complicado no javascript puro, logo eu quis fazer um menu que alternasse a exibição do componente, como tudo é componente eu pensei ser mais fácil manipular com React do que Javascript puro.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/reacttsnode (2).png"><img src="../assets/images/projectsImages/reacttsnode (2).png" alt="improject"></a>
+                    <p>Na Listagem de contatos salvos, não teve grande segredo, nada de diferente. Aqui foi onde eu pude mais treinar styled-components</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/reacttsnode (3).png"><img src="../assets/images/projectsImages/reacttsnode (3).png" alt="improject"></a> 
+                    <p>Me dei o desafio de criar um ContextMenu(menu clicado com o botão direito) em cada contato, pra treinar esse React, o conclui com sucesso. Ao clicar em cada contato aparece Deletar ou Editar.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/reacttsnode (4).png"><img src="../assets/images/projectsImages/reacttsnode (4).png" alt="improject"></a>
+                    <p>Ao clicar em Editar, me dei o outro desafio, criar um modal e imprimir o mesmo formulário do cadastramento. Também conclui com sucesso, foi aqui que precisei usar bastante as props do react, apesar de ter feito todos os meus próprios desafios, e ter ficado completo, me dei uma pausa sobre React, precisaria aprender mais sobre boas práticas, não usar de recursos de má programação.(Digo isto porque criar um contextmenu de uma lista, que passa o id do contato, para um outro modal que, foi bem trabalhoso pra um iniciante em react haha)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <p>Criado por Ruan Barroso - 2023 &copy;</p>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>

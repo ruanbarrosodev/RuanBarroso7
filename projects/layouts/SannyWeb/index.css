@@ -1,0 +1,385 @@
+body, body *{
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    box-sizing: border-box;
+}
+/* *,*::before,*::after{
+    list-style: none;
+    box-sizing: inherit;
+} */
+* a{
+    color: unset;
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+    height: 85vh;
+    /* background: linear-gradient(rgba(32,32,32),rgb(17, 17, 17),rgba(32,32,32)); */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url('img/header1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all 3s; 
+}
+.nav{
+    position: fixed; 
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    opacity: 1;
+    z-index: 999;
+   /*  box-shadow: -1px 1px 5px rgb(163, 161, 161); */
+}
+.nav .lista{
+   width: 70%;
+   height: 10vh; 
+   display: flex;
+}
+.nav .lista li{
+    background-color: rgba(32, 64, 122, 0.705);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/4);
+    height: 100%;
+}
+.nav .lista li a{
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 1px 1px 1px grey;
+    font-family: sans-serif;
+}
+ .nav .lista li a:hover{
+    text-shadow: 1px 1px 1px rgb(240, 240, 240);
+    /* background-color: rgb(3, 70, 92); */
+    /* background-color: rgb(16, 96, 122); */
+}
+.mobile{
+    display: none;
+}
+.header h1{
+    color: white;
+    font-size: 4em;
+    font-family: arial;
+    text-shadow: -1px 1px 5px black;
+}
+.container * {
+    font-family: sans-serif;
+    color: grey;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4,minmax(100px, auto));
+    grid-template-areas: 
+    "about"
+    "info"
+    "simple"
+    "tecnologias"
+    "contratar"
+    "faq"
+    ;
+}
+.container h2{
+    color: rgba(81, 130, 221, 0.897);
+    text-shadow: 1px 1px 1px rgba(4, 38, 102, 0.897);
+    padding: 20px;
+    font-size: 3em;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+.container .info {
+    grid-area: info;
+}
+.container .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+.container .info-container .info-content {
+    width: calc(100%/2);
+    padding: 20px;
+    text-indent: 2.2em;
+    border-bottom: 1px solid rgb(7, 46, 117);
+}   
+.container .info-container .info-content img{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    max-height: 300px;
+    box-shadow: -1px 1px 2px 2px grey;
+}
+.container .simple{
+    grid-area: simple;
+    width: 100%;
+}
+.container .tecnologias{
+    grid-area: tecnologias;
+    width: 100%;
+}
+.container .tecnologias .cartas_modelo{ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cartas_modelo .bloco-carta{
+    height: 350px;
+    width: 300px;
+    padding: 20px;
+}
+.cartas_modelo .bloco-carta:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.corpo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s; 
+    /* transition: all 1.0s linear;  */
+    transform-style: preserve-3d;
+}
+.modelo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+     backface-visibility: hidden;
+}
+.frente{
+    background-image: url('img/tecno.png');
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.costa{
+    background-image: url('img/tecnoBack.png');
+    transform: rotateY(180deg);
+    display: flex;
+}
+.costa .blackside{
+    display: block;
+    height: 100%;
+    width: 25px;
+    background-color: rgba(26, 26, 26, 0.705);
+}
+.costa .maisSobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 280px;
+    color: white;
+    font-family: sans-serif;
+    text-indent: 2em;
+}
+.rotate{
+    transform: rotateY(180deg);  
+}
+.container .contratar{
+    grid-area: contratar;
+}
+.container .contratar .content-contratar{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .contratar .box-content .cadastro-user h3 {
+    padding: 10px;
+}
+.container .contratar .box-content .cadastro-user p {
+    font-weight: bold;
+
+}
+.container .contratar .box-content .cadastro-user p label{
+    color: black;
+    font-weight: bold;
+}
+.container .contratar .box-content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+.container .faq{
+    grid-area: faq;
+    width: 100%;
+}
+.faq .faq-container{
+    padding: 15px;
+}
+.faq .faq-container .faq-box{
+    padding: 5px;
+}
+.faq .faq-container .faq-box .pergunta-box{
+    background-color: rgb(65, 74, 201);
+    padding: 10px;
+    color: white;
+}
+.faq .faq-container .faq-box .pergunta-box:hover{
+    cursor: pointer;
+}
+.faq .faq-container .faq-box .resposta-box{
+    display: none;
+    padding: 15px;
+    margin-bottom: 5px;
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+}
+.black, .grey{
+    display: flex;
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 1px 1px 1px black;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.container .simple .black{
+    background-color: rgba(8, 49, 124, 0.849);
+    width: 100%;
+    height: 140px;
+}
+.container .simple .grey{
+    background-color: rgba(24, 79, 199, 0.822);
+    width: 100%;
+    height: 140px;
+}
+.container .simple .grey p, .container .simple .black p{
+    color: rgb(209, 209, 209);
+}
+.container .about{
+    grid-area: about;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px;
+}
+.container .about p{
+    text-indent: 2.2em; 
+}
+.footer{
+    width: 100%;
+    background-color: rgb(15, 67, 180);
+}
+.footer .final-space{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .final-space .cold{
+    width: 50%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+} 
+.footer .final-space .cold .adventure{
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+/* .footer .final-space .social-media, .footer .final-space .manager-projects{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footer .final-space .social-media a, .footer .final-space .manager-projects a{
+    display: block;
+    width: 100%;
+} */
+.footer .final-space .SannyWeb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .final-space .SannyWeb img{
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    max-height: 150px;
+}
+.footer .copyright{
+    text-align: center;
+    background-color: rgb(15, 67, 180);
+}
+@media screen and (max-width:600px){
+    .container * {
+        padding: 10px;
+        width: 100%;
+    }
+    .nav{
+        flex-wrap: wrap;
+        margin-top: 10vh;
+        opacity: 1;
+        z-index: 999;
+        position: fixed;
+    }
+    .nav .lista{
+        width: 100%;
+        transition: all 0.2s;
+        flex-wrap: wrap;
+        transform: translateX(-110%); 
+    }
+    .nav .lista li{
+        width: 100%;
+    }
+    .mobile{
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(27, 64, 116);
+    }
+   .position{
+        width: 20%;
+        height: 100%;
+        background-color: rgb(35, 79, 141);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .position .mobileButton{
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .entrada{
+        text-align: center;
+        color: white;
+        font-size: 1.3em;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .info-container .info-content {
+        width: 100%;
+    }
+    .black{
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+    .container .contratar .box-content{
+        width: 100%;
+    }
+}

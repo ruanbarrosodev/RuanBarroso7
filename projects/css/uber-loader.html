@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ruan Barroso" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página</title>
+</head>
+<body>
+<section>
+<main>
+<article>
+</article>
+<div class="div">
+</div>
+</main>
+</section>
+<!--Ruan Barroso-->
+<div style="position:fixed;width: 100%; height: 15vh; display:flex; justify-content: start; align-items: center; bottom: 0; ">
+    <div style="background-color:#025955; font-family: sans-serif; font-weight: bold; height: 15vh; padding: 10px;">
+        <a style="color:white;" href="../../pages/webprojects.html">Voltar ao Portfolio</a>
+    </div>
+</div>
+</body>
+<style>
+section{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 1px solid black;
+    display: flex;
+    background: linear-gradient(grey,grey,rgba(32,32,32));
+    animation: rotate 1s infinite;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loop 1s infinite;
+}
+article{
+    height: 5px;
+    width: 40px;
+    border: 2px solid white;
+}
+.div{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+@keyframes loop{
+    0%,100%{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+</style>
+</html>

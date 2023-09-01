@@ -1,0 +1,274 @@
+body, body *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    border-spacing: 0;
+    box-sizing: border-box;
+}
+* a, a:visited{
+    color: black;
+}
+.nav{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(38, 139, 34);
+    box-shadow: 1px 1px 2px black;
+}
+.nav .navegacao{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.nav .navegacao a{
+    display: block;
+    height: 100%;
+    padding: 20px;
+    text-shadow: 1px 1px 1px grey;
+    text-decoration-line: none;
+    color: white;
+}
+.nav .navegacao a:hover{
+    cursor: pointer;
+    background-color: rgb(90, 211, 98);
+    color: black;
+}
+.nav .menu{
+    display: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 90vh repeat(4,minmax(100px,auto));
+    grid-row-gap: 20px;
+    grid-template-areas: 
+    "inicio inicio inicio"
+    "info info random"
+    "more more-1 more-2"
+    "aboutme aboutme aboutme"
+    "footer footer footer";
+}
+.inicio{
+    grid-area: inicio;
+    background-image: url("inicio.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
+.info{
+    grid-area: info;
+}
+.info .box-texto{
+    padding: 10px;
+    color: rgb(36, 36, 36);
+    margin-bottom: 20px;
+
+}
+.info .box-texto h2{
+    color: rgb(34, 34, 34);
+}
+.info .box-texto p{
+    text-indent: 2em;
+}
+.info .box-texto span a{
+    color: navy;
+    width: 250px;
+    padding: 10px;
+    height: 100%;
+    display: block;
+    background-color: lightgreen;
+}
+.info .box-texto span{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration-line: none;
+    margin-top: 5px;
+}
+.random{
+    grid-area: random;
+    text-align: center;
+}
+.more h4, .more-1 h4,.more-2 h4{
+    display: block;
+    background-color: rgba(87, 255, 115, 0.582);
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    color: rgb(54, 54, 54);
+}
+.more{
+    grid-area: more;
+}
+.more .box-lidos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.more .box-lidos .lidos{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+.more .box-lidos .lidos a{
+    color: black;
+}
+.more-1{
+    grid-area: more-1;
+}
+.more-1 .box-livros{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.more-1 .livro-terminado label{
+    color: rgb(54, 54, 54);
+}
+.more-1 .livro-terminado{
+    text-align: center;
+    padding: 5px;
+}
+.more-1 .barra{
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    overflow:hidden;
+    text-align: center;
+}
+.more-1 .barra .bar-fect{
+    background-color: rgb(53, 179, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.more-1 .barra .progresso{
+    width: 100%;   
+}
+.more-1 .barra .progresso1{
+    width: 30%;
+}
+.more-1 .barra .progresso2{
+    width: 48%
+}
+.more-2{
+    grid-area: more-2;
+}
+.more-2 .box-livros{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+.more-2 .box-livros input{
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    font-size: 1.2em;
+}
+.more-2 .box-livros input[type="button"]{
+    border: 1px solid black;
+    background-color: white;
+    color: rgb(54, 54, 54);
+}
+.more-2 .box-livros input[type="button"]:hover{
+    background-color: rgb(149, 247, 146);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.aboutme{
+    grid-area: aboutme;
+}
+.aboutme .barr{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(10, 121, 6);
+    opacity: 0.8;
+}
+.aboutme .barrs{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(27, 202, 21);
+}
+.aboutme .sobremim{
+    width: 100%;
+}
+.aboutme .sobremim h4{
+    background-color: rgba(87, 255, 115, 0.582);
+    display: flex;
+    padding: 10px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+.aboutme .sobremim p{
+    color: rgb(100, 99, 99);
+    font-family: lucida;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-top: 20px;
+}
+.footer{
+    grid-area: footer;
+    margin-top: 20px;
+    text-align: center;
+    background: linear-gradient(rgb(14, 187, 8),rgb(17, 124, 13));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+/*Página texto*/
+.info .texto-completo h2{
+    font-size: 2.5em;
+}
+.info .texto-completo p{
+    width: 75%;
+    margin-left: 100px;
+}
+@media screen and (max-width: 500px){
+    .container{
+        grid-template-columns: 100%;
+        grid-template-rows: 88vh repeat(7,minmax(100px,auto));
+        grid-template-areas: 
+        "inicio inicio inicio"
+        "random random random"
+        "info info info"
+        "more more more"
+        "more-1 more-1 more-1"
+        "more-2 more-2 more-2"
+        "aboutme aboutme aboutme"
+        "footer footer footer";
+    }
+    .nav .menu{
+        display: block;
+        height: 100%;
+        width: calc(100%/6);
+        background-color: rgb(90, 211, 98);
+        border: none;
+        font-size: 3em;
+        color: white;
+    }
+    .nav .navegacao{
+        display: block;
+        transition: all 1s;
+        transform: translateX(-100%);
+        background-color: rgb(38, 139, 34);
+        height: auto;
+    }
+    .nav .navegacao a{
+        border-bottom: 1px solid black;
+    }
+    .info .texto-completo p{
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+}
+

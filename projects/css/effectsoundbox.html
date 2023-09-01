@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ruan Barroso" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página</title>
+</head>
+<body>
+<section>
+    <div class="undefined"></div>
+    <div class="undefined"></div>
+    <div class="undefined"></div>
+    <div class="undefined"></div>
+    <div class="undefined"></div>
+    <div class="undefined"></div>
+</section>
+
+<!--Ruan Barroso-->
+<div style="position:fixed;width: 100%; height: 15vh; display:flex; justify-content: start; align-items: center; bottom: 0; ">
+    <div style="background-color:#025955; font-family: sans-serif; font-weight: bold; height: 15vh; padding: 10px;">
+        <a style="color:white;" href="../../pages/webprojects.html">Voltar ao Portfolio</a>
+    </div>
+</div>
+</body>
+<style>
+section{
+    box-shadow: inset 1px 1px 200px 10px black;
+    border-radius: 100px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.undefined{
+    border-radius: 10px;
+    width: 2px;
+    box-shadow: 1px 1px 10px 1px white;
+    background: linear-gradient(red,blue);
+}
+.undefined:nth-child(1){
+    height: 25px;
+    animation: burn 1s infinite linear;
+}
+.undefined:nth-child(2){
+    height: 70px;
+    animation: down 1s infinite linear;
+    background-color: black;
+}
+.undefined:nth-child(3){
+    height: 40px;
+    animation: burn 1s infinite linear;
+}
+.undefined:nth-child(4){
+    height: 80px;
+    animation: down 1s infinite linear;
+    background-color: black;
+}
+.undefined:nth-child(5){
+    height: 90px;
+    animation: down 1s infinite linear;
+}
+.undefined:nth-child(6){
+    height: 30px;
+    animation: burn 1s infinite linear;
+    background-color: black;
+}
+@keyframes burn{
+    50%{
+        height: 90px;
+    }
+    75%{
+        height: 40px;
+    }
+    100%{
+        height: 20px;
+    }
+}
+@keyframes down{
+    50%{
+        height: 20px;
+    }
+    75%{
+        height: 40px;
+    }
+    100%{
+        height: 90px;
+    }
+}
+</style>
+</html>
