@@ -1,10 +1,19 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #ffffff;
+    --cor-textoTitulo:  rgb(15, 15, 15);
+    --cor-textoTituloOpaco:  rgb(61, 61, 61);
+}
 body *, body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+body {
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+}
 .nav{
     position: fixed; 
     display: flex;
@@ -14,9 +23,23 @@ body *, body{
    /*  box-shadow: -1px 1px 5px rgb(163, 161, 161); */
 }
 .nav .lista{
-   width: 70%;
+   width: 100%;
    height: 10vh; 
    display: flex;
+}
+.nav .switchColors{
+   height: 10vh;
+   width: 100px; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #025955;
+}
+.nav .switchColors img{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(102%);
+}
+.nav .switchColors img:hover{
+    cursor: pointer;
 }
 .nav .lista li{
     background-color: #025955;
@@ -26,8 +49,10 @@ body *, body{
     width: calc(100%/4);
     height: 100%;
 }
-
 .nav .lista li:hover{
+    background-color: #00917C;
+}
+.nav .switchColors:hover{
     background-color: #00917C;
 }
 .nav .lista li a{
@@ -37,8 +62,8 @@ body *, body{
     display: block;
     font-weight: bold;
     font-size: 1.2em;
-    color: white;
     text-shadow: 1px 1px 1px grey;
+    color: var(--cor-texto);
 }
 .mobile{
     display: none;
@@ -61,13 +86,12 @@ body *, body{
     width: 100%;
     border-radius: 10px;
     margin: auto;
-    background-color: white;
     padding: 15px;
     /* background-color: #93B1A6; */
    /*  background-color: #433520; */
 }
-.containerHeader h1{
-    color: rgb(49, 49, 49);
+.containerHeader h1, .containerHeader p{
+    color: var(--cor-textoTituloOpaco);
     font-size: 3em;
     font-family: arial;
     text-align: center;
@@ -91,7 +115,7 @@ main{
     width: 100%;
 }
 main h1{
-    color: rgba(32,32,32);
+    color: var(--cor-textoTitulo);
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -105,7 +129,7 @@ main .aboutMe{
 .aboutMe .containerMe{  
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 .aboutMe .containerMe section{
@@ -113,16 +137,16 @@ main .aboutMe{
 }
 .containerMe #sobreMim{
     width: 600px;
+    color: var(--cor-textoTituloOpaco);
 }
 .aboutMe .containerMe #profile{
-    border-radius: 190px;
+    border-radius: 200px;
     max-height: 400px;
     margin: 0 auto;
-    display:block;
+    display:flex;
 }
 .educationContainer{
     padding: 20px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.781), rgba(255, 255, 255, 0.897)), url("assets/icons/diploma.svg");
     background-size: 100px;
     background-repeat: no-repeat;
     background-position-x: 150px;
@@ -145,10 +169,16 @@ main .aboutMe{
     height: 20px;
     width: 20px !important;
 }
+.educationContainer *, .languagesContainer *, h4{
+    color: var(--cor-textoTitulo);
+}
 main .techs{
     margin-top: 50px;
     width: 100%;
     padding: 20px;
+}
+.techs #options span{
+    color: black;
 }
 main .techs .thanos{
     display: flex;
@@ -173,6 +203,7 @@ main .techs .thanos{
     font-size: 1.2em;
 }
 .techs p{
+    color: var(--cor-textoTitulo);
     display: flex;
     justify-content: center;
 }
@@ -207,7 +238,6 @@ main .techs .thanos{
     align-items: center;
     font-size: 0.7em;
     padding: 5px;
-    color: white;
     background-color: rgb(7, 94, 65);
 }
 .techs .containerTechs img{
@@ -236,16 +266,21 @@ main .techs .thanos{
 .containerCertificates .certificate{
     display: flex;
     margin-top: 10px;
-    background-color: #93B1A6;
+    background-color: #93B1A6; 
     width: 700px;
 }
 .containerCertificates .certificate .certificateMore{
     width: 100%;
     padding: 5px;
 }
+.containerCertificates .certificate .certificateMore h3{
+    width: 100%;
+    padding: 5px;
+    color: var(--cor-textoTitulo);
+}
 .containerCertificates .certificate .certificateMore p{
     text-align: end;
-    color: rgb(29, 29, 29);
+    color: var(--cor-textoTituloOpaco);
     margin-bottom: 5px;
 }
 .containerCertificates .certificate .certificateMore a{
@@ -265,6 +300,7 @@ main .techs .thanos{
     margin-top: 30px;
     width: 100%;
     padding: 20px;
+    color: var(--cor-textoTituloOpaco);
 }
 .projects .containerProjects{
     display: flex;
@@ -282,7 +318,7 @@ main .techs .thanos{
     margin-bottom: 10px;
 }
 .containerProjects section a{
-    color: black;
+    color: var(--cor-textoTitulo);
     text-align: center;
     margin-top: 5px;
     display: block;
@@ -298,6 +334,9 @@ footer{
     justify-content: center;
     align-items: center;
 }
+footer * {
+    color: var(--cor-textoTitulo);
+}
 
 @media screen and (max-width:800px){
     * img{
@@ -305,7 +344,6 @@ footer{
         height: 100% ;    
     }
     .nav{
-        flex-wrap: wrap;
         margin-top: 10vh;
         opacity: 1;
         z-index: 999;
@@ -330,16 +368,34 @@ footer{
         background-color: #025955;
     }
    .position{
-        width: 20%;
+        width: 100%;
         height: 100%;
         background-color: #04706b;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
     .position #button_mobile{
         height: 100%;
+        width: 90px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(102%);
     }
+    .nav .switchColors{
+        display: none;
+    }
+    .position .mobileSwitchColors{
+        height: 10vh;
+        width: 100px; 
+        display: flex;
+        justify-content: end;
+        align-items: center;
+     }
+     .position .mobileSwitchColors img{
+         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(102%);
+     }
+     .position .mobileSwitchColors img:hover{
+         cursor: pointer;
+     }
     .containerHeader{
         font-size: 0.9em;
     }
