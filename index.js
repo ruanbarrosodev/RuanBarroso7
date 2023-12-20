@@ -75,7 +75,7 @@ valoresFalsos = () => {
     btnSwitchColorMobile.addEventListener("click", switchTheme);
 
 
-    document.addEventListener('DOMContentLoaded', function () {
+  /*   document.addEventListener('DOMContentLoaded', function () {
     var containerForm = document.getElementById('contact'); 
     if (containerForm) {
             containerForm.innerHTML = `
@@ -107,7 +107,7 @@ valoresFalsos = () => {
         }
     
     });
-
+ */
     
 
     /* document.addEventListener('DOMContentLoaded', function () {
