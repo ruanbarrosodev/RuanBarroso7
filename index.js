@@ -81,22 +81,22 @@ valoresFalsos = () => {
             containerForm.innerHTML = `
                 <h1>Contato</h1>
                 <div class="form-contact">
-                    <form name="contact" method="POST" onSubmit="submit" netlify>
+                    <form name="contact" method="POST" onSubmit="submit" data-netlify=true>
                         <div class="form-input">
                             <label>Seu nome</label>
-                            <input type="text" name="name" placeholder="Seu nome">
+                            <input type="text" id="name" name="name" placeholder="Seu nome">
                         </div>
                         <div class="form-input">
                             <label>Email</label>
-                            <input type="text" name="email" placeholder="Email">
+                            <input type="text" id="email" name="email" placeholder="Email">
                         </div>
                         <div class="form-input">
                             <label>Assunto</label>
-                            <input type="text" name="subject" placeholder="Assunto">
+                            <input type="text" id="subject" name="subject" placeholder="Assunto">
                         </div>
                         <div class="form-input">
                             <label>Descrição</label>
-                            <textarea rows="7" name="describe" placeholder="Escreva a descrição aqui!"></textarea>
+                            <textarea rows="7" id="describe" name="describe" placeholder="Escreva a descrição aqui!"></textarea>
                         </div>
                         <div class="form-input">
                             <input type="submit" name="Enviar"  value="Enviar email!">
