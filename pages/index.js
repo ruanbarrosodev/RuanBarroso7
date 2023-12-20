@@ -36,7 +36,7 @@ switchTheme = function(){
 btnSwitchColor.addEventListener("click", switchTheme);
 btnSwitchColorMobile.addEventListener("click", switchTheme);
 
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     var containerForm = document.getElementById('contact'); 
     if (containerForm) {
         containerForm.innerHTML = `
@@ -67,4 +67,4 @@ document.addEventListener('DOMContentLoaded', function () {
         `;    
     }
     
-});
+}); */
