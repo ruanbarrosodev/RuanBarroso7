@@ -36,3 +36,35 @@ switchTheme = function(){
 btnSwitchColor.addEventListener("click", switchTheme);
 btnSwitchColorMobile.addEventListener("click", switchTheme);
 
+document.addEventListener('DOMContentLoaded', function () {
+    var containerForm = document.getElementById('contact'); 
+    if (containerForm) {
+        containerForm.innerHTML = `
+            <h1>Contato</h1>
+            <div class="form-contact">
+                <form name="contact" netlify>
+                    <div class="form-input">
+                        <label>Seu nome</label>
+                        <input type="text" name="name" placeholder="Seu nome">
+                    </div>
+                    <div class="form-input">
+                        <label>Email</label>
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-input">
+                        <label>Assunto</label>
+                        <input type="text" name="subject" placeholder="Assunto">
+                    </div>
+                    <div class="form-input">
+                        <label>Descrição</label>
+                        <textarea rows="7" name="describe" placeholder="Escreva a descrição aqui!"></textarea>
+                    </div>
+                    <div class="form-input">
+                        <input type="submit" name="Enviar"  value="Enviar email!">
+                    </div>
+                </form>
+            </div>
+        `;    
+    }
+    
+});

@@ -12,6 +12,7 @@ const root = document.documentElement;
 
 icons = document.querySelectorAll(".iconN");
 
+
 btn.onclick = function(){
     if(menuNav.style.transform=="translateX(0%)"){
         menuNav.style.transform = "translateX(-110%)";
@@ -43,34 +44,83 @@ valoresFalsos = () => {
         element.children[0].innerHTML = "100%";
     });
 }
+    
+    switchTheme = function(){
+        if (root.style.getPropertyValue('--cor-fundo') === '' || root.style.getPropertyValue('--cor-fundo') === '#ffffff') {
+            //ativar modo escuro
+            root.style.setProperty('--cor-fundo', '#0a0a0a');
+            root.style.setProperty('--cor-texto', '#fefefe');
+            root.style.setProperty('--cor-textoTitulo', '##f8f8f2');
+            root.style.setProperty('--cor-textoTituloOpaco', '#ffffff');
+            btnSwitchColor.children[0].src = "assets/icons/sun.svg";
+            btnSwitchColorMobile.children[0].src = "assets/icons/sun.svg";
+            icons.forEach(element => {
+                element.style.filter = "invert(100%) sepia(0%) saturate(7491%) hue-rotate(118deg) brightness(105%) contrast(99%)";
+            });
+        } else {
+            //ativar modo claro
+            root.style.setProperty('--cor-fundo', '#ffffff');
+            root.style.setProperty('--cor-texto', '#ffffff');
+            root.style.setProperty('--cor-textoTitulo', 'rgb(15, 15, 15)');
+            root.style.setProperty('--cor-textoTituloOpaco', 'rgb(61, 61, 61)');
+            btnSwitchColor.children[0].src = "assets/icons/moon.svg";
+            btnSwitchColorMobile.children[0].src = "assets/icons/moon.svg";
+            icons.forEach(element => {
+                element.style.filter = "";
+            });
+        }
+    } 
+
+    btnSwitchColor.addEventListener("click", switchTheme);
+    btnSwitchColorMobile.addEventListener("click", switchTheme);
 
 
-switchTheme = function(){
-    if (root.style.getPropertyValue('--cor-fundo') === '' || root.style.getPropertyValue('--cor-fundo') === '#ffffff') {
-        //ativar modo escuro
-        root.style.setProperty('--cor-fundo', '#0a0a0a');
-        root.style.setProperty('--cor-texto', '#fefefe');
-        root.style.setProperty('--cor-textoTitulo', '##f8f8f2');
-        root.style.setProperty('--cor-textoTituloOpaco', '#ffffff');
-        btnSwitchColor.children[0].src = "assets/icons/sun.svg";
-        btnSwitchColorMobile.children[0].src = "assets/icons/sun.svg";
-        icons.forEach(element => {
-            element.style.filter = "invert(100%) sepia(0%) saturate(7491%) hue-rotate(118deg) brightness(105%) contrast(99%)";
-        });
-    } else {
-        //ativar modo claro
-        root.style.setProperty('--cor-fundo', '#ffffff');
-        root.style.setProperty('--cor-texto', '#ffffff');
-        root.style.setProperty('--cor-textoTitulo', 'rgb(15, 15, 15)');
-        root.style.setProperty('--cor-textoTituloOpaco', 'rgb(61, 61, 61)');
-        btnSwitchColor.children[0].src = "assets/icons/moon.svg";
-        btnSwitchColorMobile.children[0].src = "assets/icons/moon.svg";
-        icons.forEach(element => {
-            element.style.filter = "";
-        });
-    }
-}
+    document.addEventListener('DOMContentLoaded', function () {
+    var containerForm = document.getElementById('contact'); 
+    if (containerForm) {
+            containerForm.innerHTML = `
+                <h1>Contato</h1>
+                <div class="form-contact">
+                    <form name="contact" netlify>
+                        <div class="form-input">
+                            <label>Seu nome</label>
+                            <input type="text" name="name" placeholder="Seu nome">
+                        </div>
+                        <div class="form-input">
+                            <label>Email</label>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-input">
+                            <label>Assunto</label>
+                            <input type="text" name="subject" placeholder="Assunto">
+                        </div>
+                        <div class="form-input">
+                            <label>Descrição</label>
+                            <textarea rows="7" name="describe" placeholder="Escreva a descrição aqui!"></textarea>
+                        </div>
+                        <div class="form-input">
+                            <input type="submit" name="Enviar"  value="Enviar email!">
+                        </div>
+                    </form>
+                </div>
+            `;    
+        }
+    
+    });
 
-btnSwitchColor.addEventListener("click", switchTheme);
-btnSwitchColorMobile.addEventListener("click", switchTheme);
+    
 
+    /* document.addEventListener('DOMContentLoaded', function () {
+    var containerForm = document.getElementById('contact'); 
+    if (containerForm) {
+        fetch('./components/contact.html')
+            .then(response => response.text())
+            .then(htmlContent => {
+                containerForm.innerHTML = htmlContent;
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o arquivo HTML:', error);
+            });
+        }
+    }); */
+    
