@@ -81,7 +81,7 @@ valoresFalsos = () => {
             containerForm.innerHTML = `
                 <h1>Contato</h1>
                 <div class="form-contact">
-                    <form name="contact" method="POST" onSubmit="submit" data-netlify=true>
+                    <form name="contact" method="POST" data-netlify=true>
                         <div class="form-input">
                             <label>Seu nome</label>
                             <input type="text" id="name" name="name" placeholder="Seu nome">
