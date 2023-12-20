@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         containerForm.innerHTML = `
             <h1>Contato</h1>
             <div class="form-contact">
-                <form name="contact" netlify>
+                <form name="contact" method="POST" onSubmit="submit" netlify>
                     <div class="form-input">
                         <label>Seu nome</label>
                         <input type="text" name="name" placeholder="Seu nome">
