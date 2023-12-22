@@ -161,7 +161,11 @@ footer{
     gap: 10px;
 }
 .contact  h1{
+    color: var(--cor-textoTitulo);
+    text-align: center;
     margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 3em;
 }
 .contact .form-contact{
     margin-top: 20px;

@@ -5,6 +5,16 @@ btnSwitchColor = document.getElementById('modoEscuro');
 btnSwitchColorMobile = document.getElementById('modoEscuroMobile');
 const root = document.documentElement;
 
+
+listNav = document.querySelectorAll(".lista li");
+if (window.innerWidth < 800) {
+    listNav.forEach((liElement) => { 
+        liElement.onclick = function(){
+            menuNav.style.transform = "translateX(-110%)";
+        }
+    });
+}   
+
 btn.onclick = function(){
     if(menuNav.style.transform=="translateX(0%)"){
         menuNav.style.transform = "translateX(-110%)";

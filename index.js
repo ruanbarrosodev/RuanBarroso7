@@ -13,6 +13,15 @@ const root = document.documentElement;
 icons = document.querySelectorAll(".iconN");
 
 
+listNav = document.querySelectorAll(".lista li");
+if (window.innerWidth < 800) {
+    listNav.forEach((liElement) => { 
+        liElement.onclick = function(){
+            menuNav.style.transform = "translateX(-110%)";
+        }
+    });
+}   
+
 btn.onclick = function(){
     if(menuNav.style.transform=="translateX(0%)"){
         menuNav.style.transform = "translateX(-110%)";
