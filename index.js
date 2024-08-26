@@ -12,6 +12,19 @@ const root = document.documentElement;
 
 icons = document.querySelectorAll(".iconN");
 
+function typeWrite(elemento){
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = ' ';
+    textoArray.forEach(function(letra, i){   
+      
+    setTimeout(function(){
+        elemento.innerHTML += letra;
+    }, 75 * i)
+
+  });
+}
+const titulo = document.querySelector('#messageInitial');
+typeWrite(titulo);
 
 listNav = document.querySelectorAll(".lista li");
 if (window.innerWidth < 800) {

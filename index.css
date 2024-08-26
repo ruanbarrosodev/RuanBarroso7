@@ -68,6 +68,51 @@ body {
 .mobile{
     display: none;
 }
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+#messageInitial{
+    margin: 0 auto;
+   /*  white-space: nowrap; */
+    overflow: hidden;
+}
+#messageInitial:after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .7s infinite;
+}   
+.expe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.experience{
+    padding: 15px;
+}
+.experience h4{
+    font-size: 2em;
+}
+.experience ul{
+    padding: 10px;
+}
+.experience ul li{
+    color: var(--cor-textoTitulo);
+    margin-left: 40px;
+}
+.experience p{
+    color: var(--cor-textoTitulo);
+    text-indent: 20px;
+}
+.experience span{
+    color: var(--cor-textoTituloOpaco);
+    text-align: end;
+}
 .header{
     width: 100%;
     height: 90vh;
@@ -173,6 +218,11 @@ main .aboutMe{
     color: var(--cor-textoTitulo);
 }
 main .techs{
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;
+}
+main .expe{
     margin-top: 50px;
     width: 100%;
     padding: 20px;
