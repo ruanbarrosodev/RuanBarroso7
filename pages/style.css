@@ -76,8 +76,10 @@ main{
     margin: 30px auto;
 }
 .projectsOld{
-    margin-top: 30px;
+    margin-top: 60px;
+    box-shadow: 1px 1px 1px 2px rgb(201, 201, 201);
     color: var(--cor-textoTituloOpaco);
+    padding: 20px;
 }
 .projectsOld h2, h1{
     text-align: center;
@@ -104,10 +106,10 @@ main{
     color: var(--cor-textoTituloOpaco);
 }
 .projects{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 .project{
-    margin-top: 40px;
+    margin-top: 90px;
     margin-bottom: 40px;
     border-top: 1px solid rgb(18, 207, 182);
 }
@@ -195,11 +197,13 @@ footer{
     cursor: pointer;
     background-color: rgb(3, 119, 102);
 }
-
 @media screen and (max-width:800px){
     * img{
         width: 100% ;
         height: 100% ;    
+    }
+    .containerOldProjects ul img{
+        max-width: 90%;
     }
     .nav{
         flex-wrap: wrap;
@@ -257,6 +261,9 @@ footer{
      }
     h4,h3,h2,h1,h5{
         font-size: 1.0em !important;
+    }
+    .containerOldProjects img{
+       /*  width: 80% !important; */
     }
 
 }

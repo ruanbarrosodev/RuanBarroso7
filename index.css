@@ -448,7 +448,7 @@ footer * {
     position: absolute;
     z-index: 1;
     white-space: nowrap;
-}   
+}  
 @media screen and (max-width:800px){
     * img{
         width: 100% ;
