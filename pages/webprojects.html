@@ -38,24 +38,24 @@
     <h1>Projetos</h1>
     <div class="projects">
         <section class="project">
-            <h2>Ebook Manager</h2>
-            <p>Os projetos exigem banco de dados, quando se trata de projetos com banco de dados, não posso coloca-los aqui e por isso a partir daqui só imagens. Este primeiro é de longe o maior projeto que fiz, é um site de compartilhamento de livros ebook, onde o usuário entra com seu login, salva os seus livros, e pode baixar os livros de outras pessoas que o colocaram publico. Tem tela administrativa, onde eu como administrador do site, posso cadastrar um novo gênero, categoria, cadastrar novos livros, e aceitar comentários. O site tem busca de livros, tem livro destaque, livro mais lidos, comentários do livro, ele é completo. Vale ressalvar que eu não escrevi uma linha de front-end nesse projeto(fora a sessão administrativa que foi inteira feita por mim), o website em si eu fiz apenas a parte back-end, era um projeto final de curso e tarefas foram divididas. A primeira versão dele foi escrita em PHP, mas quando passei a estudar NodeJS eu fiz a atualização dele pra server side rendering com NodeJS. </p>
+            <h2>ISAT Administração</h2>
+            <p>Neste projeto, usei meu máximo esforço e dedicação para deixa-lo organizado, modular, com boas práticas e pensando usuabilidade do profissional que usará. Este é um projeto para administração de usuários e dos próprios profissionais da instituição. Contando com mais de 9 tabelas no Diagrama de Entidade e Relacionamento, um controle desses dados, de acesso, de alteração deles, foi feito minunciosamente com atenção e cuidado. Todas as telas são pensadas em fácil entendimento para o profissional, e todas as ações são pensadas na facilitação do trabalho do mesmo. Mostrarei algumas páginas mais legais de explicar.</p>
             <div class="containerProject">
                 <div class="projectDescription">
-                    <a href="../assets/images/projectsImages/ebm (1).png"><img src="../assets/images/projectsImages/ebm (1).png" alt="improject"></a>
-                    <p>Com um um livro de destaque que se atualiza a cada 3 dias, uma tela de login, últimos livros adicionados e mais lidos, esse é a página inicial. Todos os gêneros, categorias são cadastrados no banco de dados podendo ter fácil adição de novos.</p>
+                    <a href="../assets/images/projectsImages/isat1.png"><img src="../assets/images/projectsImages/isat1.png" alt="improject"></a>
+                    <p>Nesta tela podemos ver que despesa/benefício são adicionados ao usuário paciente, ambas essas listas são carregadas via fetch API, já previamente adicionadas em uma tela de adição. Neste `modal` já podemos verificar uma adição de familiar/entre outros, com botão de fechar caso desista. Nesta tela, todas as adições podem ser feitas em conjunto, muitas despesas, muitos benefícios ou muitos familiares, para então serem adicionados ao Banco de dados.</p>
                 </div>
                 <div class="projectDescription">
-                    <a href="../assets/images/projectsImages/ebm (2).png"><img src="../assets/images/projectsImages/ebm (2).png" alt="improject"></a>
-                    <p>Este é a tela de busca de livros, onde trás os livros. Eu fiz uma query onde me traria resultado com o nome do autor, e do livro. Também coloquei filtros de data de lançamento e e ordem alfabética.</p>
+                    <a href="../assets/images/projectsImages/isat2.png"><img src="../assets/images/projectsImages/isat2.png" alt="improject"></a>
+                    <p>Nesta tela de controle de profissionais para a diretoria, pode-se criar cargos e projetos dos profissionais e alteração do projeto. A exibição das listas é carregada via fetch API, atualizada instantânea. Na primeira guia é o cadastro com uma senha automatica da instituição, e na guia funcionários, posso filtrar por projeto ou cargo, adicionei um botão de confirmação para a ação de `desativar funcionário` e `resetar senha`.</p>
+                </div>
+                 <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/isat4.png"><img src="../assets/images/projectsImages/isat4.png" alt="improject"></a>
+                    <p>No primeiro login, o profissional é solicitado a redefinir sua senha, que é armazenada com criptografia segura utilizando password_hash. Dependendo do cargo ele terá acesso a opções extra do menu. Todo cargo tem seu campo sigiloso sobre o usuário/paciente. Em caso de esquecimento de senha, a diretoria pode redefinir pra senha inicial proposta da instituição.</p>
                 </div>
                 <div class="projectDescription">
-                    <a href="../assets/images/projectsImages/ebm (3).png"><img src="../assets/images/projectsImages/ebm (3).png" alt="improject"></a> 
-                    <p>A página do livro, que era responsável por mostrar comentários dos livros, e a opção de download. Com todas as informações do livro, salvas e resgatadas do banco de dados.</p>
-                </div>
-                <div class="projectDescription">
-                    <a href="../assets/images/projectsImages/ebm (4).png"><img src="../assets/images/projectsImages/ebm (4).png" alt="improject"></a>
-                    <p>Esta era a tela de Driver do usuário, onde ele salvava seus ebooks pessoais, podendo alternar entre privado e publico. Caso publico poderia ser baixado por outras pessoas.</p>
+                    <a href="../assets/images/projectsImages/isat3.png"><img src="../assets/images/projectsImages/isat3.png" alt="improject"></a> 
+                    <p>A primeira tela, provavelmente a mais utilizada pela instituição, permite que o profissional cadastre um novo usuário, descreva sua situação, defina o tipo de atendimento e salve no sistema. é gerado um documento Word contendo as informações do atendimento. Na tela de edição, é possível alterar diversos campos relacionados ao usuário, como dados de saúde e moradia. Esses campos não exigem exibição completa — apenas um pequeno exemplo, como mostrado na primeira imagem, é suficiente para demonstrar a complexidade.</p>
                 </div>
             </div>
         </section>
@@ -78,6 +78,28 @@
                 <div class="projectDescription">
                     <a href="../assets/images/projectsImages/agcoram4.jpg"><img src="../assets/images/projectsImages/agcoram4.jpg" alt="improject"></a>
                     <p>Interface de atualização de clientes integrada à API do sistema de pagamentos, permitindo a edição de dados cadastrais e garantindo a sincronização com a plataforma.</p>
+                </div>
+            </div>
+        </section>
+        <section class="project">
+            <h2>Ebook Manager</h2>
+            <p>Este projeto é de longe o projeto que considero mais ideal e bonito, é um site de compartilhamento de livros ebook, onde o usuário entra com seu login, salva os seus livros, e pode baixar os livros de outras pessoas que o colocaram publico. Tem tela administrativa, onde eu como administrador do site, posso cadastrar um novo gênero, categoria, cadastrar novos livros, e aceitar comentários. O site tem busca de livros, tem livro destaque, livro mais lidos, comentários do livro, ele é completo. Vale ressalvar que eu não escrevi uma linha de front-end nesse projeto(fora a sessão administrativa que foi inteira feita por mim), o website em si eu fiz apenas a parte back-end, era um projeto final de curso e tarefas foram divididas. A primeira versão dele foi escrita em PHP, mas quando passei a estudar NodeJS eu fiz a atualização dele pra server side rendering com NodeJS. </p>
+            <div class="containerProject">
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (1).png"><img src="../assets/images/projectsImages/ebm (1).png" alt="improject"></a>
+                    <p>Com um um livro de destaque que se atualiza a cada 3 dias, uma tela de login, últimos livros adicionados e mais lidos, esse é a página inicial. Todos os gêneros, categorias são cadastrados no banco de dados podendo ter fácil adição de novos.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (2).png"><img src="../assets/images/projectsImages/ebm (2).png" alt="improject"></a>
+                    <p>Este é a tela de busca de livros, onde trás os livros. Eu fiz uma query onde me traria resultado com o nome do autor, e do livro. Também coloquei filtros de data de lançamento e e ordem alfabética.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (3).png"><img src="../assets/images/projectsImages/ebm (3).png" alt="improject"></a> 
+                    <p>A página do livro, que era responsável por mostrar comentários dos livros, e a opção de download. Com todas as informações do livro, salvas e resgatadas do banco de dados.</p>
+                </div>
+                <div class="projectDescription">
+                    <a href="../assets/images/projectsImages/ebm (4).png"><img src="../assets/images/projectsImages/ebm (4).png" alt="improject"></a>
+                    <p>Esta era a tela de Driver do usuário, onde ele salvava seus ebooks pessoais, podendo alternar entre privado e publico. Caso publico poderia ser baixado por outras pessoas.</p>
                 </div>
             </div>
         </section>
